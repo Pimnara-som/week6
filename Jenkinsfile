@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'kubernetes docker'
+        label 'k8s-agent-1'
     }
 
     triggers {
