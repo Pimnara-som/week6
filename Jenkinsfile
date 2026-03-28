@@ -33,7 +33,7 @@ pipeline {
                     sh "kubectl apply -f k8s/deployment.yaml"
                     sh "kubectl apply -f k8s/service.yaml"
                     sh "kubectl apply -f k8s/ingress.yaml"
-                    sh "kubectl set image deployment/nginx-deployment nginx-container=${APP_NAME}:${IMAGE_TAG}"
+                    sh "kubectl set image deployment/nginx-deployment nginx-container=${APP_NAME}:latest"
                 }
             }
         }
