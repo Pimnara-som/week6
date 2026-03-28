@@ -23,7 +23,7 @@ pipeline {
                     sh "docker build -t ${APP_NAME}:${IMAGE_TAG} ."
                     
                     // 2. โหลด Image เข้า KIND Cluster (ถ้าใช้ Docker Desktop ปกติ ให้คอมเมนต์บรรทัดนี้ทิ้ง)
-                    sh "kind load docker-image ${APP_NAME}:${IMAGE_TAG}" 
+                    sh "kind load docker-image ${APP_NAME}:${IMAGE_TAG} --name my-cluster"
                 }
             }
         }
